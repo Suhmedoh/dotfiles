@@ -1,0 +1,39 @@
+*faceName: Tewi
+*faceSize: 10
+*font: -lucy-tewi-medium-*-normal-*-11-*-*-*-*-60-*-*
+*boldFont: -lucy-tewi-medium-*-normal-*-11-*-*-*-*-60-*-*
+*.cursorColor: #40a06e
+*.scrollBar: false
+
+!sets the background to black and foreground to white for other terminals relying on Xresources
+*background: #1f2722
+*foreground: #f4cc60
+
+! black
+*color0: #1f2722
+*color8: #4a6253
+! red
+*color1: #d5a070
+*color9: #e5c5a8
+! green
+*color2: #b2bd9d
+*color10: #c6ceb6
+! yellow
+*color3: #f1b922
+*color11: #f6d782
+! blue
+*color4: #698a91
+*color12: #a3bbc1
+! magenta
+*color5: #6d9b73
+*color13: #98b79d
+! cyan
+*color6: #c49a4a
+*color14: #dcbe83
+! white
+*color7: #b4b9ba
+*color15: #d0d1d1
+! underline when default
+*colorUL: #40a06e
+! vim: set ft=xdefaults:
+
