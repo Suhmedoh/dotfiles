@@ -1,0 +1,43 @@
+*faceName: Iosevka Term
+*faceSize: 8
+*font: xft:Iosevka Term-10:Medium
+*boldFont: xft:Iosevka Term-10:Regular
+*.cursorColor: #DA3E68
+*.scrollBar: false
+!URxvt.letterSpace: -1
+URxvt*scrollTtyOutput:      false
+URxvt*scrollWithBuffer:     true
+URxvt*scrollTtyKeypress:    true
+
+
+!sets the background to black and foreground to white for other terminals relying on Xresources
+*background: #f1f2b5
+*foreground: #135058
+
+! black
+*color0: #303952
+*color8: #596275
+! red
+*color1: #DA3E68
+*color9: #9F2878
+! green
+*color2: #0BAD47
+*color10: #0D683F
+! yellow
+*color3: #B59A17
+*color11: #5B7C18
+! blue
+*color4: #2B7FC4
+*color12: #1A4C75
+! magenta
+*color5: #BC04DC
+*color13: #77038C
+! cyan
+*color6: #00BDBD
+*color14: #007575
+! white
+*color7: #f1f2b5
+*color15: #f1f2b5
+! underline when default
+*colorUL: #DA3E68
+! vim: set ft=xdefaults:
