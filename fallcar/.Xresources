@@ -2,7 +2,7 @@
 *faceSize: 8
 *font: xft:Iosevka Term-10:Medium
 *boldFont: xft:Iosevka Term-10:Regular
-*.cursorColor: #DA3E68
+*.cursorColor: #466196
 *.scrollBar: false
 !URxvt.letterSpace: -1
 URxvt*scrollTtyOutput:      false
@@ -11,33 +11,33 @@ URxvt*scrollTtyKeypress:    true
 
 
 !sets the background to black and foreground to white for other terminals relying on Xresources
-*background: #f1f2b5
-*foreground: #135058
+*background: #292929
+*foreground: #7199c6
 
 ! black
-*color0: #303952
-*color8: #596275
+*color0: #404040
+*color8: #2d3033
 ! red
-*color1: #DA3E68
-*color9: #9A2828
+*color1: #be7b7c
+*color9: #b45049
 ! green
-*color2: #0BAD47
-*color10: #0D683F
+*color2: #b3ac6c
+*color10: #4e5531
 ! yellow
-*color3: #B59A17
-*color11: #5B7C18
+*color3: #e0ac52
+*color11: #c78143
 ! blue
-*color4: #2B7FC4
-*color12: #1A4C75
+*color4: #466196
+*color12: #374567
 ! magenta
-*color5: #BC04DC
-*color13: #77038C
+*color5: #9d8d9e
+*color13: #6e646e
 ! cyan
-*color6: #00BDBD
-*color14: #007575
+*color6: #a7c1d2
+*color14: #7199c6
 ! white
-*color7: #f1f2b5
-*color15: #f1f2b5
+*color7: #c1cfda
+*color15: #8c8571
 ! underline when default
-*colorUL: #DA3E68
+*colorUL: #c78143
 ! vim: set ft=xdefaults:

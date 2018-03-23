@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openbox_menu xmlns="http://openbox.org/3.4/menu">
+	<menu execute="/usr/libexec/openbox-xdg-menu applications" id="applications-menu" label="Applications"/>
+	<menu execute="/usr/libexec/openbox-xdg-menu preferences" id="preferences-menu" label="Preferences"/>
+	<menu execute="/usr/libexec/openbox-xdg-menu system-settings" id="administration-menu" label="Administration"/>
+	<menu execute="/usr/libexec/openbox-xdg-menu /etc/xdg/openbox/terminals" id="terminals-menu" label="Terminals"/>
+	<menu id="root-menu" label="Onelink">
+		<separator label="Openbox"/>
+		<menu id="root-menu-20335" label="most used">
+			<item label="s p o t i f y">
+				<action name="Execute">
+					<execute>spotify</execute>
+				</action>
+			</item>
+			<item label="u r x v t">
+				<action name="Execute">
+					<execute>urxvt</execute>
+				</action>
+			</item>
+			<item label="o u t l o o k">
+				<action name="Execute">
+					<execute>firefox https://owa-nj.transperfect.com/owa/auth/logon.aspx?replaceCurrent=1&amp;url=https%3a%2f%2fowa-nj.transperfect.com%2fowa%2f</execute>
+				</action>
+			</item>
+			<item label="f i r e f o x">
+				<action name="Execute">
+					<execute>firefox</execute>
+				</action>
+			</item>
+		</menu>
+		<menu id="applications-menu"/>
+		<menu id="preferences-menu"/>
+		<menu id="administration-menu"/>
+		<separator/>
+		<menu id="terminals-menu"/>
+		<separator/>
+		<item label="Reconfigure">
+			<action name="Reconfigure"/>
+		</item>
+		<item label="Exit">
+			<action name="Exit">
+				<prompt>yes</prompt>
+			</action>
+		</item>
+		<separator/>
+		<item label="Log Out">
+			<action name="SessionLogout">
+				<prompt>yes</prompt>
+			</action>
+		</item>
+	</menu>
+</openbox_menu>
