@@ -1,0 +1,66 @@
+# .bashrc
+
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+	. /etc/bashrc
+fi
+
+# Uncomment the following line if you don't like systemctl's auto-paging feature:
+# export SYSTEMD_PAGER=
+
+# User specific aliases and functions
+
+alias papers="ls ~/gh/Bulksplash/images"
+alias py3='python3'
+alias la='ls -la'
+alias est='TZ=EST date'
+alias tok='TZ=GMT+9 date'
+alias utc='TZ=UTC date'
+alias slack_call="exec /home/jsemedo/.screenlayout/slack_call.sh"
+alias default_layout="exec /home/jsemedo/.screenlayout/default.sh"
+#PS1='\[\033[00;32m\]░\[\033[00;33m\]▒\[\033[00;34m\]▓\[\033[00;35m\]█\[\033[00;35m\]█\[\033[00;34m\]▓\[\033[00;33m\]▒\[\033[00;32m\]░ \[\033[01;31m\]\w\[\033[00;35m\] \$ \[\033[00;36m\]\[\033[0m\]'
+
+PS1="░▒▓█▓▒░"
+TEMPFILE=/tmp/counter.tmp
+echo 0 > $TEMPFILE
+
+prompts=( " ░▒▓██▓▒░ " "░▒▓██▓▒░  " "▒▓██▓▒░  ░" "▓██▓▒░  ░▒" "██▓▒░  ░▒▓" "█▓▒░  ░▒▓█" "▓▒░  ░▒▓██" "▒░  ░▒▓██▓" "░  ░▒▓██▓▒" "  ░▒▓██▓▒░" )
+shift_prompt ()
+{
+    COUNTER=$[$(cat $TEMPFILE) + 1]
+    # Store the new value
+    echo $COUNTER > $TEMPFILE
+    echo "${prompts[$1]}"
+}
+
+PS1='\[$(tput setaf $(($(cat $TEMPFILE) % 10)))\]$(shift_prompt $(($(cat $TEMPFILE) % 10))) \[\033[01;31m\]\w\[\033[00;35m\] ꭗ\[\033[0m\] '
+
+LS_COLORS="$LS_COLORS:di=1;93:ex=1;101"
+(cat ~/.cache/wal/sequences &)
+source ~/.cache/wal/colors-tty.sh
+
+f() {
+    fff "$@"
+    cd "$(cat "${XDG_CACHE_HOME:=${HOME}/.cache}/fff/.fff_d")"
+}
+
+cd ~
+
+
+#history tweaks
+
+export HISTTIMEFORMAT="%h %d %H:%M:%S "
+
+export HISTSIZE=10000
+
+shopt -s histappend
+
+PROMPT_COMMAND='history -a'
+
+export HISTCONTROL=ignorespace:erasedups
+
+export HISTIGNORE="ls:ps:history*"
+
+shopt -s cmdhist
+
+printf '\033[5 q\r'

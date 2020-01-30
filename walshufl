@@ -1,0 +1,8 @@
+#!/bin/bash
+DIR="/home/$USER/Pictures/wallpapers/walshuf"
+PIC="$(ls $DIR/* | shuf -n 1)"
+#PIC="/home/jsemedo/Pictures/wallpapers/walshuf/image-sheri_silver-vSUFNODp_zs.jpg"
+wal -l --backend colortheif -i $PIC 
+BG_COLOR=$(sed -n -e 's/^\*background:\s//p' ~/.cache/wal/colors.Xresources) 
+feh --bg-max --image-bg $BG_COLOR $PIC $PIC
+

@@ -1,0 +1,7 @@
+#!/bin/bash                                                          
+                                                                     
+DIRECTORY=$1                                                         
+
+unlink ~/Pictures/wallpapers/walshuf
+
+ln -s ~/gh/Bulksplash/images/${DIRECTORY} ~/Pictures/wallpapers/walshuf  
